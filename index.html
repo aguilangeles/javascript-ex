@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+ 	<link rel="stylesheet" href="style.css">
+	<!--<link rel="stylesheet" href="normalize.css"> -->
+	<script src="apps.js"></script>
+		<script src="boletos.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+			<h1>Ejercicios de Javascript</h1>
+		</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				
+				<div class="cotizar">
+				<h2><span class="titulo">Consigna 1</span></h2>
+				<br>						
+				<p>Hacer un programa en el que se ingrese un monto de dinero expresado en pesos y la cotización del dólar y luego imprima por pantalla el monto equivalente en dólares (con 2 dígitos decimales).
+				</p>
+				<form action="" class="form-inline">
+					<div class="form-group">
+						<div class="input-group dolar">
+							<label for="pesos">Dolar</label>
+							<input type="num" id="pesos"> 
+							<a href="javascript:cotizarPesos()" class="btn btn-success btn-sm">cotizar</a>
+						</div>
+					</div>
+				</form>
+				<div class="compra">
+					<label for="compra">Pesos Compra</label>
+					<input type="num" id="compra"> 
+				</div>
+				<div class="venta">
+					<label for="venta">Pesos Venta</label>
+					<input type="num" id="venta"> 
+				</div>
+			</div>
+			</div>
+	
+
+			<div class="col-md-4">
+				<h2><span class="titulo">Consigna 2</span></h2>
+				<p>Maquina de boletos. Devolver el vuelto en la cantidad de monedas desde la mas grande y las mas chica.</p>
+				<br>
+
+				<div class="valorBoleto">
+					<label for="">Valor del Boleto</label>
+					<input type="num" id="valorBoleto" value="2.25"> 
+				</div>
+				<form action="" class="form-inline">
+					<div class="form-group">
+						<div class="input-group boleto">
+							<label for="pesos">Ingreso</label>
+							<input type="num" id="boleto"> 
+							<a href="javascript:mostrar()" class="btn btn-success btn-sm">Vuelto</a>
+						</div>
+					</div>
+				</form>
+				<div class="vuelto">
+					<label for="vuelto">Vuelto</label>
+					<i
+					nput type="num" id="vuelto"> 
+				</div>
+				<div class="cinco">
+					<label for="cinco">5 Cent</label>
+					<input type="num" id="cinco"> 
+				</div>
+				<div class="diez">
+					<label for="diez">10 cent</label>
+					<input type="num" id="diez"> 
+				</div>
+				<div class="veinticinco">
+					<label for="veinticinco">25 cent</label>
+					<input type="num" id="veinticinco"> 
+				</div>
+				<div class="cincuenta">
+					<label for="compra">50 cent</label>
+					<input type="num" id="cincuenta"> 
+				</div>
+				<div class="unpeso">
+					<label for="unpeso">un peso</label>
+					<input type="num" id="unpeso"> 
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>		
+</body>
+</html>
