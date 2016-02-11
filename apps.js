@@ -13,26 +13,25 @@
 
 */
 
-var cotizacionVenta=14.90;
-var cotizacionCompra=13.95;
+
 
 function cotizarPesos(){
 
+
 var pesos=document.getElementById("pesos").value;
-	getCompra(pesos);
-	getVenta(pesos);
+var cotizacion=document.getElementById("dolar").value;
+
+	var resultado= pesos / cotizacion;
+	document.getElementById("resultado").value=resultado;
+	
+
 
 };
 
-function getCompra(pesos){
-	console.log('entro en compra');
-	var compra= pesos * cotizacionCompra;
-	document.getElementById("compra").value=compra;
+function getCompra(pesos, cotizacion){
+	console.log('entro en convertir');
+	
 
 };
-function getVenta(pesos){
-	var venta= pesos * cotizacionVenta;
-	document.getElementById("venta").value =venta;
 
-};
 
