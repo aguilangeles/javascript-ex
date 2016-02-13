@@ -2,42 +2,53 @@
 
 //var oracion = "esta es una oracion compleja no una oracion simple";
 
+var miContadordePalabras = {
 
-function contarPalabras(oracion){
+	contar : function contarPalabras(){
+		var objeto = {};
 
-	var objeto = {};
-
-	var split = oracion.split(" ");
-
-	for(var i = 0; i< split.length; i++){
-
-		var key = split[i];
-
-		if(!objeto[key]){
-			
-			objeto[key]=1 ;
-
-		}else{
-			objeto[key]++;
-		}			
+		var oracion = document.getElementById('oracion').value;	
 		
-	}
-	return objeto;
-}
+		var split = oracion.split(" ");
 
-function recorrerObjeto(){
+		for(var i = 0; i< split.length; i++){
 
-	var oracion = document.getElementById('oracion').value;	
+			var key = split[i];
 
-	var objeto = contarPalabras(oracion);
+			if(!objeto[key]){
 
-	var resultado=[];
-	for ( prop in objeto){
+				objeto[key]=1 ;
 
-		var palabra ='\n"' + prop + '":  ' + objeto[prop];
-		
-		resultado.push(palabra);
-	}
+			}else{
+				objeto[key]++;
+			}			
+
+		}
+		return objeto;
+	},
+
+	mostrar: function recorrerObjeto(){
 	
-	document.getElementById('palabras').value= resultado;
-}
+		var objeto = this.contar();
+
+		var resultado=[];
+		var ul = 	document.getElementById('milista');
+		
+		for ( prop in objeto){
+
+			var palabra ='\n' + prop + ' :  ' + objeto[prop];
+
+			var li = document.createElement('li');
+            li.setAttribute('class','list-group-item');
+            li.appendChild(document.createTextNode(palabra));
+			ul.appendChild(li);
+			
+		}
+
+	}
+
+};
+
+window.APP = miContadordePalabras;
+
+
