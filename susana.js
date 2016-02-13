@@ -1,39 +1,41 @@
+/*Convertir en numeros un telefono: 0800-SUSANA*/
 
 
-/*TODO refactor*/
+function convertirLetrasANumeros(){
 
+var resultadoNumeros =[];
 
+	var valorIngresado =document.getElementById('llamaAl').value;
 
-
-function devolverLetras(){
-
-var array =[];
-
-	var value =document.getElementById('llama').value;
-
-	var split = value.split("");
+	var split = valorIngresado.split("");
 	for(var i = 0; i< split.length; i++){
-		var digito = split[i];
+		
+    var digito = split[i];
 
 		if(digito==='-'){
-			array.push(digito);
+			resultadoNumeros.push(digito);
+
 		}else if(isNaN(digito)){
-			//console.log('que pasa aca ' + digito)
+			
 			var miNumero = devolverNumeros(digito);
-			array.push(miNumero)
+			resultadoNumeros.push(miNumero);
+
 		}else{
 			var toI = parseInt(digito);
-			array.push(toI);
+			resultadoNumeros.push(toI);
 		}
 	}
-	document.getElementById('numero').value=array.join("");
+
+	document.getElementById('numero').value=resultadoNumeros.join("");
 
 }
 
 
 function devolverNumeros(unaLetra){
-		var numero ;
-	switch(unaLetra){
+		var letra =unaLetra.toLowerCase();
+    var numero ;
+
+	switch(letra){
 
    case "a":
    case "b":
@@ -81,8 +83,12 @@ function devolverNumeros(unaLetra){
    case "w":
       numero= 9;
        break;
+    case "x":
+   case "y":
+   case "z":
+    numero= 0;
  	default:
-       numero= 0;
+       numero= "-";
        break;
 
 }

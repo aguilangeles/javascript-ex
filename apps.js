@@ -1,18 +1,6 @@
 /*apps.js
 1- Hacer un programa en el que se ingrese un monto de dinero expresado en pesos y la cotización del dólar y luego imprima por pantalla el monto equivalente en dólares (con 2 dígitos decimales).
-
-
-2- Maquina de boletos. Devolver el vuelto en la cantidad de monedas desde la mas grande y las mas chica. 
-
-(Mas dificil stock de monedas).
-
-
-3- Iniciales de una frase
-
-
-
 */
-
 
 
 function cotizarPesos(){
@@ -28,10 +16,6 @@ var cotizacion=document.getElementById("dolar").value;
 
 };
 
-function getCompra(pesos, cotizacion){
-	console.log('entro en convertir');
-	
 
-};
 
 

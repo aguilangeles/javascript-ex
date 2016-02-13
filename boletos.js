@@ -18,7 +18,7 @@ var valores ={
 
 //si ingreso una valor, y el boleto tiene un precio fijo. Considerando el stock, cuanto me tiene que devolver?
 //
-function vuelto(ingreso){
+function verVuelto(ingreso){
 	return ingreso - valorBoleto;
 }
 
@@ -41,16 +41,17 @@ function returnCero(num){
 	}
 	return num;
 }
+
 function calcularVuelto(vuelto, enmonedasde){
 	var ret = vuelto/enmonedasde;
 	return returnCero(ret);
 }
 
-function mostrar(){
+function cantidadDeMonedas(){
 //
 var ingreso =document.getElementById('boleto').value;
 //
-var mivuelto =vuelto(ingreso);
+var mivuelto =verVuelto(ingreso);
 //
 document.getElementById('vuelto').value = mivuelto;
 //
