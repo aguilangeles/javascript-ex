@@ -1,9 +1,12 @@
 .titulo{
     text-align: center;
 }
-.cotizar{
+.cotizar, .boletos, .holasusana{
 	padding: 20px;
 }
 form{
+	margin-top: 40px;
+}
+.valorBoleto{
 	margin-top: 40px;
 }

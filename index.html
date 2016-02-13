@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Ejercicios en Javascript para la tercer clase de FullStack en Coderhouse-->
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -15,6 +16,7 @@
 	<!--<link rel="stylesheet" href="normalize.css"> -->
 	<script src="apps.js"></script>
 		<script src="boletos.js"></script>
+		<script src="susana.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -24,8 +26,7 @@
 		</div>
 		</div>
 		<div class="row">
-			<div class="col-md-4">
-				
+			<div class="col-md-4">	
 				<div class="cotizar">
 					<h2><span class="titulo">Consigna 1</span></h2>
 					<br>						
@@ -53,47 +54,72 @@
 
 
 			<div class="col-md-4">
-				<h2><span class="titulo">Consigna 2</span></h2>
-				<p>Maquina de boletos. Devolver el vuelto en la cantidad de monedas desde la mas grande y las mas chica.</p>
-				<br>
+				<div class="boletos">				
+					<h2><span class="titulo">Consigna 2</span></h2>
+					<br>
+					<p>Maquina de boletos. Devolver el vuelto en la cantidad de monedas desde la mas grande y las mas chica.</p>
 
-				<div class="valorBoleto">
-					<label for="">Valor del Boleto</label>
-					<input type="num" id="valorBoleto" value="2.25"> 
-				</div>
-				<form action="" class="form-inline">
-					<div class="form-group">
-						<div class="input-group boleto">
-							<label for="pesos">Ingreso</label>
-							<input type="num" id="boleto"> 
-							<a href="javascript:mostrar()" class="btn btn-success btn-sm">Vuelto</a>
-						</div>
+					<div class="valorBoleto">
+						<label for="">Valor del Boleto</label>
+						<input class="pull-right" type="num" id="valorBoleto" value="2.25" disabled> 
 					</div>
-				</form>
-				<div class="vuelto">
-					<label for="vuelto">Vuelto</label>
-					<input type="num" id="vuelto"> 
+					<form action="" >
+						<div class="form-group">
+
+							<label  for="pesos" >Ingreso</label>
+							<input  class="pull-right" type="num" id="boleto" > 		
+						</div>
+						<br>
+						<div class="form-group">
+							<a href="javascript:mostrar()" class="btn btn-warning btn-block btn-sm ">Mostrar Vuelto En Monedas</a>
+							<br>
+							<br>
+						</div>
+					</form>
+					<div class="form-group vuelto">
+						<label for="vuelto">Vuelto</label>
+						<input class="pull-right" type="num" id="vuelto"> 
+					</div>
+					<div class="form-group cinco">
+						<label for="cinco">5 Cent</label>
+						<input class="pull-right" type="num" id="cinco"> 
+					</div>
+					<div class="form-group diez">
+						<label for="diez">10 cent</label>
+						<input class="pull-right" type="num" id="diez"> 
+					</div>
+					<div class="form-group veinticinco">
+						<label for="veinticinco">25 cent</label>
+						<input class="pull-right" type="num" id="veinticinco"> 
+					</div>
+					<div class="form-group cincuenta">
+						<label for="compra">50 cent</label>
+						<input class="pull-right" type="num" id="cincuenta"> 
+					</div>
+					<div class="form-group unpeso">
+						<label for="unpeso">un peso</label>
+						<input class="pull-right" type="num" id="unpeso"> 
+					</div>
 				</div>
-				<div class="cinco">
-					<label for="cinco">5 Cent</label>
-					<input type="num" id="cinco"> 
+			</div>
+
+			<div class="col-md-4">
+				<div class="holasusana">				
+					<h2><span class="titulo">Consigna 3</span></h2>
+					<br>
+					<p>Convertir letras en numeros, como en los 0800</p>
+					<br><br>
 				</div>
-				<div class="diez">
-					<label for="diez">10 cent</label>
-					<input type="num" id="diez"> 
+				<div class="form-group">
+					<label for="input-num">Llamanos al</label>
+					<input type="text" class="pull-right" id="llama">
 				</div>
-				<div class="veinticinco">
-					<label for="veinticinco">25 cent</label>
-					<input type="num" id="veinticinco"> 
+				<div class="form-group">
+
+					<a href="javascript:devolverLetras()" >Marcando el </a>
+					<input type="text" id="numero" class="pull-right"></input>
 				</div>
-				<div class="cincuenta">
-					<label for="compra">50 cent</label>
-					<input type="num" id="cincuenta"> 
-				</div>
-				<div class="unpeso">
-					<label for="unpeso">un peso</label>
-					<input type="num" id="unpeso"> 
-				</div>
+			
 			</div>
 		</div>
 	</div>
