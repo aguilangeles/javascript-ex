@@ -29,9 +29,8 @@ function recorrerObjeto(){
 
 	var oracion = document.getElementById('oracion').value;	
 
-	console.log(oracion);
-
 	var objeto = contarPalabras(oracion);
+
 	var resultado=[];
 	for ( prop in objeto){
 
@@ -39,8 +38,6 @@ function recorrerObjeto(){
 		
 		resultado.push(palabra);
 	}
-	console.log(resultado);
+	
 	document.getElementById('palabras').value= resultado;
 }
-//contarPalabras(oracion);
-//recorrerObjeto();
