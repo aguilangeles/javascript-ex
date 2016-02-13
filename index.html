@@ -17,6 +17,7 @@
 	<script src="apps.js"></script>
 		<script src="boletos.js"></script>
 		<script src="susana.js"></script>
+		<script src="contadorPalabras.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -119,6 +120,30 @@
 					<input type="text" id="numero" class="pull-right"></input>
 				</div>
 			
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+					<div class="contadorPalabras">				
+					<h2><span class="titulo">Consigna 4</span></h2>
+					<br>
+					<p>Contador de Palabras</p>
+					<br><br>
+					</div>
+
+					<div class="form-group ">
+					<label for="input-num">Oracion</label>
+					<input type="text"  class="form-control"id="oracion">
+					</div>
+					<div class="form-group">
+
+					<a href="javascript:recorrerObjeto()" >Contar Palabras </a>
+					    
+			      		
+			      		<textarea class="form-control" rows="5" id="palabras"></textarea>
+			   	 	</div>
+							
+
 			</div>
 		</div>
 	</div>
